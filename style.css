@@ -4,29 +4,64 @@
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* Center the box */
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f6ff;
+}
+
+/* Animation for box */
 .box{
     text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: slideFade 1s ease forwards;
 }
 
-
+/* Keyframes for box animation */
+@keyframes slideFade {
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 h1{
-    text-align: center
-
-
+    text-align: center;
+    margin-bottom: 15px;
 }
+
+/* Input styling + focus animation */
 .inp{
     width: 200px;
-    height: 25px;;
+    height: 25px;
     margin: 10px;
     border-radius: 5px;
     background-color: whitesmoke;
     border: none;
-
+    padding-left: 10px;
+    transition: all 0.3s ease;
 }
+
+.inp:focus{
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 8px lightskyblue;
+    transform: scale(1.05);
+}
+
+/* Button styling + hover animation */
 #btn{
-
-
     width: 200px;
     height: 30px;
     margin:10px;
@@ -35,7 +70,18 @@ h1{
     border: none;
     color: white;
     font-size: large;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+#btn:hover{
+    background-color: dodgerblue;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(30,144,255,0.5);
+}
+
 p{
     font-size: 0.8em;
+    margin-top: 10px;
+    opacity: 0.7;
 }
